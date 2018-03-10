@@ -12,3 +12,5 @@ ii) textblob
 # methods
  i) mean_approach  -> This method guesses user's feelings by calculating mean of his friend's polarities of posts. <br>
  ii) mode_approach -> This method guesses user's feelings by calculating mode of his friend's polarities of posts.
+# notes
+ Even though it seems so much unrealistic to extract feeling from some sentences, it is possible to do such via sentiment analysis. There are so many freely available modules in python for sentiment analysis but I like to use textblob for it. If you're going to read the code, let me tell you that polarity is a number given to text ranging between -1 to 1 meaning that -0.99 is  negative and 0.99 is positive, values around 0 are neutral. Same goes with subjectivity where values near 1 are subjective and values near -1 are objective.
