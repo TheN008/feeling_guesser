@@ -5,10 +5,10 @@ import math
 import sys
 
 #Authenticating on twitter...
-apikey = "Bo4BKAhpTAXP2azmEs1bCW9QO"
-consumersecret = "twDjfRRLxvZrcI74XRbfUS86fOjci09j4wG0DKtCR8PqNBpLyN"
-accesstoken = "911198539941797888-3GFJGLW87wzqs72wYEowCL47gW00Xii"
-accesstokensecret = "E5FjGj7SUedxRZCaSahEiOIed0PtZKIbrHL9wdHMp7tGP"
+apikey = ""
+consumersecret = ""
+accesstoken = ""
+accesstokensecret = ""
 
 auth = tweepy.OAuthHandler(apikey, consumersecret)
 auth.set_access_token(accesstoken, accesstokensecret)
