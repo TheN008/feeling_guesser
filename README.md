@@ -7,5 +7,5 @@ iii) A sample space of friends is only taken
 # required python external modules
 tweepy & textblob
 # methods
- i) mean_approach -> This method guesses user's feelings by calculating mean of his friend's polarities of posts. <br>
+ i) mean_approach  -> This method guesses user's feelings by calculating mean of his friend's polarities of posts. <br>
  ii) mode_approach -> This method guesses user's feelings by calculating mode of his friend's polarities of posts.
