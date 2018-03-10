@@ -28,7 +28,7 @@ class Analyzer(object):
 		self.times = 50 # number of posts you want to analyze for each friend
 		self.all_polarities = [] #number of polarities for different posts
 		self.all_subjectivities = [] #number of subjectivity for different posts
-
+		print "It may take a while... please be patient"
 		for friend in self.user.friends():
 			try:
 				friend_user = self.api.user_timeline(friend.screen_name, count=self.times)
