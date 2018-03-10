@@ -7,7 +7,8 @@ iii) A sample space of friends is only taken <br>
 iv) Positive tweet yeilds positive feeling & negative tweet yields negative feeling.<br />
 v) The core concept is that the feelings are reflection of what we observe from our surroundings.
 # required python external modules
-tweepy & textblob
+i) tweepy <br/> 
+ii) textblob
 # methods
  i) mean_approach  -> This method guesses user's feelings by calculating mean of his friend's polarities of posts. <br>
  ii) mode_approach -> This method guesses user's feelings by calculating mode of his friend's polarities of posts.
