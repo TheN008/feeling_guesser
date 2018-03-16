@@ -72,7 +72,7 @@ class Analyzer(object):
 		#calculating average of all polarities. Since it's individual series we'll do EX/N 
 		
 		if len(self.all_polarities) == 0:
-			print "No posts found. exiting..."
+			print "No tweets found. exiting..."
 			sys.exit(0)
 		
 		for polarity in self.all_polarities:
