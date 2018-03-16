@@ -29,7 +29,7 @@ class Analyzer(object):
 		self.all_polarities = [] #number of polarities for different posts
 		self.all_subjectivities = [] #number of subjectivity for different posts
 		print "The posts are now being crawled. Might take some time!."
-		for friend in self.user.friends():
+		for friend in self.user.friends(): # this loop is set-up just to work, there has to very much more improvements here
 			try:
 				friend_user = self.api.user_timeline(friend.screen_name, count=self.times)
 			except:
