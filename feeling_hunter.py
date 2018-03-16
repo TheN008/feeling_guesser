@@ -70,11 +70,15 @@ class Analyzer(object):
 		total = 0 # total number of analyzed class
 				
 		#calculating average of all polarities. Since it's individual series we'll do EX/N 
-
+		
+		if len(self.all_polarities) == 0:
+			print "No posts found. exiting..."
+			sys.exit(0)
+		
 		for polarity in self.all_polarities:
 			average_polarity += polarity
 
-		average_polarity /= len(self.all_polarities) # MEAN = EX/N WHERE N!=0
+		average_polarity /= len(self.all_polarities) if len(self.all_polarities)!=0 else 1 # MEAN = EX/N WHERE N!=0
 
 		for subjectivity in self.all_subjectivities:
 			average_subjectivity += subjectivity
