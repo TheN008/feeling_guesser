@@ -125,7 +125,10 @@ class Analyzer(object):
 		subjectivity_status.append([round(subjective_tweets*100),round(objective_tweets*100)])
 		return [polarity_status, subjectivity_status]
 
-
+	@staticmethod
+	def comparePolarity(positive,negative):
+		prediction = "positive" if positive > negative else "negative"
+		return prediction
 
 username = raw_input("Input the target\n>>>")
 approach = raw_input("Input 1 for mode approach and 0 for mean approach\n>>>")
@@ -137,10 +140,12 @@ except tweepy.error.TweepError as e:
 approach = int(approach)
 if approach == 1:
 	data = analyze.mode_approach()
-	print "%s might be feeling %d%s positive, %d%s negative, %d%s neutral." % (analyze.username ,data[0][0][0], "%", data[0][0][1],\
-			"%", data[0][0][2], "%")
-	print "%s might also be interested in %d%s subjective and %d%s objective things." % (analyze.username, data[1][0][0], "%", data[1][0][1],\
-			 "%")
+	positivePercent = data[0][0][0]
+	negativePercent = data[0][0][1]
+	subjectivePercent = data[1][0][0]
+	objectivePercent = data[1][0][1]
+	print("More friends of the user %s have shared %s tweets overall, so %s might also be %s" % (username, analyze.comparePolarity(positivePercent, negativePercent),username, analyze.comparePolarity(positivePercent, negativePercent)))
+	
 else:
 	data = analyze.mean_approach()
 	print "%s might be %s and also should like more %s things." % (analyze.username, data[0], data[1])
