@@ -78,7 +78,7 @@ class Analyzer(object):
 		for polarity in self.all_polarities:
 			average_polarity += polarity
 
-		average_polarity /= len(self.all_polarities) # MEAN = ΣX/N WHERE N!=0
+		average_polarity /= len(self.all_polarities) # MEAN = EX/N WHERE N!=0
 
 		for subjectivity in self.all_subjectivities:
 			average_subjectivity += subjectivity
